@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  mysql:
+    container_name: pythoncomvue-mysql
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=minicurso
+      - MYSQL_DATABASE=pythoncomvue
+    ports:
+      - 3306:3306
+
+  adminer:
+    container_name: pythoncomvue-adminer
+    image: adminer
+    ports:
+      - 8080:8080
